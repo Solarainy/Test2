@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>知识小测</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<script type="text/javascript" src="js/jquery-2.1.0.js">
+		</script>
+		<style>
+			html{
+				height: 100%;
+			}
+			body{
+				background-image: url('img/bg.jpg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				margin: 50px;
+			}
+			.div1{
+				position: absolute;
+				background-color: greenyellow;
+				opacity: 0.5;
+				margin: 50px;
+				width: 85%;
+				height: 80%;
+			}
+			.div2{
+				margin: 50px;
+			}
+			.div3{
+				text-align: center;
+			}
+			.right{
+				color: green;
+				height: 40px;
+			}
+			.wrong{
+				color: red;
+				height: 40px;
+			}
+			#answer{
+				text-align: center;
+			}
+			.ybt{
+				position: absolute;
+				width: 200px;
+				height: 40px;
+				cursor: pointer;
+				top: -9999px;
+				left: -9999px;
+			}
+			.xbt{
+				position: static;
+				width: 200px;
+				height: 40px;
+				cursor: pointer;
+			}
+			.botton{
+				width: 200px;
+				height: 40px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="div2">
+				</br></br></br>
+				<font size="5"><b>3.端午节在我国有不同的称呼，以下哪个不是端午节的别称？</b></font>
+				<font size="4">
+					<p><input type="button" value="A.五月节" class="botton" onclick="wrong()"/></p>
+					<p><input type="button" value="B.菖蒲节" class="botton" onclick="wrong()"/></p>
+					<p><input type="button" value="C.六月节" class="botton" onclick="right()"/></p>
+					<p><input type="button" value="D.沐兰节" class="botton" onclick="wrong()"/></p>
+				</font>
+				<div class="div3">
+					<p><font id="answer" ></font></p>
+					<a href="index-4-4.html"><input id="next" class="ybt" type="button" value="下一题"/></a>
+				</div>
+			</div>	
+		</div>
+		<script type="text/javascript">
+			function right(){
+				var answer=document.getElementById("answer");
+				answer.innerHTML="恭喜回答正确！";
+				answer.className="right";
+				var next=document.getElementById("next");
+				next.className="xbt";
+			}
+			function wrong(){
+				var answer=document.getElementById("answer");
+				answer.innerHTML="很遗憾回答错误";
+				answer.className="wrong";
+			}
+		</script>
+	</body>
+</html>
